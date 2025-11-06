@@ -9,7 +9,7 @@ def greet():
     num = request.args.get("num", default=0, type=int)
     message = "Hi Everyone! I am running through cloud shell. "
 
-    if num is not None and num > 0 and num < 100:
+    if num is not None and num => 0 and num < 100:
         kelvin = num + 273
         fahrenheit = (num * 9/5) + 32
         message += f"Celsius: {num}, Kelvin: {kelvin}, Fahrenheit: {fahrenheit}"
