@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def greet():
     """Return a custom friendly HTTP greeting with temperature conversion."""
-    num = request.args.get("num", type=int)  # get ?num= value from URL
+    nnum = request.args.get("num", default=0, type=int)
     message = "Hi Everyone! I am running through cloud shell. "
 
     if num is not None and num > 0 and num < 100:
