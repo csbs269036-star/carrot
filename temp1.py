@@ -9,7 +9,7 @@ def greet():
     num = request.args.get("num", default=0, type=int)
     message = "Hi Everyone! I am running through cloud shell. "
 
-    if num is not None and num => 0 and num < 100:
+    if num is not None and num > 0 and num < 100:
         kelvin = num + 273
         fahrenheit = (num * 9/5) + 32
         message += f"Celsius: {num}, Kelvin: {kelvin}, Fahrenheit: {fahrenheit}"
@@ -22,4 +22,3 @@ if __name__ == "__main__":
     app_host = "http://127.0.0.1:8090"
     print(f"App host link: {app_host}")
     app.run(host="127.0.0.1", port=8090, debug=True)
-#num = request.args.get("num", type=int) # get ?num= value from URL
