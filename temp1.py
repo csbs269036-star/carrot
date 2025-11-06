@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def greet():
     """Return a custom friendly HTTP greeting with temperature conversion."""
-    nnum = request.args.get("num", default=0, type=int)
+    num = request.args.get("num", default=0, type=int)
     message = "Hi Everyone! I am running through cloud shell. "
 
     if num is not None and num > 0 and num < 100:
@@ -22,3 +22,4 @@ if __name__ == "__main__":
     app_host = "http://127.0.0.1:8090"
     print(f"App host link: {app_host}")
     app.run(host="127.0.0.1", port=8090, debug=True)
+#num = request.args.get("num", type=int) # get ?num= value from URL
